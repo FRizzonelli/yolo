@@ -3,11 +3,18 @@ import { MenuIcon, SparklesIcon } from '@heroicons/react/outline';
 import { Fragment, FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { CtaYolo, Testimonial } from '.';
+import { useYoloContext } from '../../hooks/useYoloContext';
 import { AlternateStepComponent } from './';
 
 interface ILandingProps {}
 
 const Landing: FunctionComponent<ILandingProps> = () => {
+  const yoloCtx = useYoloContext();
+
+  const onStartBookYoloClicked = () => {
+    yoloCtx.setBookYolo({});
+  };
+
   return (
     <div className='bg-white'>
       <header>
@@ -98,6 +105,7 @@ const Landing: FunctionComponent<ILandingProps> = () => {
                 <div className='mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center'>
                   <Link
                     to='/book-yolo/step-one'
+                    onClick={onStartBookYoloClicked}
                     className='flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8'
                   >
                     YOLO!

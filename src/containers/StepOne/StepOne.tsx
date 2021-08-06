@@ -22,6 +22,10 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
     history.replace(`step-two`);
   };
 
+  const handleOnPrevClicked = () => {
+    history.push('/');
+  };
+
   return (
     <div className='space-y-6'>
       <div className='bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6'>
@@ -69,7 +73,13 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
         </div>
       </div>
 
-      <div className='flex justify-end'>
+      <div className='flex justify-between'>
+        <button
+          onClick={handleOnPrevClicked}
+          className='ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+        >
+          Back
+        </button>
         <button
           type='submit'
           onClick={handleOnSubmit}
