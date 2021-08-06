@@ -1,4 +1,3 @@
-
 import { Popover, Transition } from '@headlessui/react';
 import {
   AnnotationIcon,
@@ -182,8 +181,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-interface ILandingProps {
-}
+interface ILandingProps {}
 
 const Landing: FunctionComponent<ILandingProps> = (props) => {
   return (
@@ -713,6 +711,6 @@ const Landing: FunctionComponent<ILandingProps> = (props) => {
       </footer>
     </div>
   );
-}
+};
 
 export default Landing;
