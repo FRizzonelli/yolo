@@ -1,9 +1,11 @@
 import { Popover, Transition } from '@headlessui/react';
-import { AnnotationIcon, ChatAlt2Icon, InboxIcon, MenuIcon, QuestionMarkCircleIcon, XIcon } from '@heroicons/react/outline';
+import { AnnotationIcon, ChatAlt2Icon, InboxIcon, MenuIcon, QuestionMarkCircleIcon, XIcon, SparklesIcon } from '@heroicons/react/outline';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 import { Fragment, FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { Testimonial } from '.';
+import { CtaYolo } from '.';
+import { AlternateStepComponent } from './';
 import { classNames } from '../../utils';
 
 const solutions = [
@@ -319,7 +321,35 @@ const Landing: FunctionComponent<ILandingProps> = () => {
           </div>
         </div>
 
-        {/* Testimonial section */}
+        {/* Alternating Step Sections */}
+        <div className='relative pt-16 pb-32 overflow-hidden'>
+          <div aria-hidden='true' className='absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100' />
+          <AlternateStepComponent
+            icon={SparklesIcon}
+            side='r'
+            image='https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg'
+            description='Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra
+                  duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.'
+          />
+          <AlternateStepComponent
+            icon={SparklesIcon}
+            side='l'
+            image='https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg'
+            description='Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra
+                  duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.'
+          />
+          <AlternateStepComponent
+            icon={SparklesIcon}
+            side='r'
+            image='https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg'
+            description='Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra
+                  duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.'
+          />
+        </div>
+
+        {/* Cta Section*/}
+        <CtaYolo />
+        {/* Testimonial Section */}
         <Testimonial />
       </main>
 
