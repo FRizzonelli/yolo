@@ -1,5 +1,3 @@
-import { InboxIcon, SparklesIcon } from '@heroicons/react/solid';
-import { IpcNetConnectOpts } from 'node:net';
 import { FunctionComponent } from 'react';
 
 interface IAlternateStep {

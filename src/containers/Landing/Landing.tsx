@@ -1,12 +1,11 @@
 import { Popover, Transition } from '@headlessui/react';
-import { AnnotationIcon, ChatAlt2Icon, InboxIcon, MenuIcon, QuestionMarkCircleIcon, XIcon, SparklesIcon } from '@heroicons/react/outline';
+import { AnnotationIcon, ChatAlt2Icon, InboxIcon, MenuIcon, QuestionMarkCircleIcon, SparklesIcon, XIcon } from '@heroicons/react/outline';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 import { Fragment, FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
-import { Testimonial } from '.';
-import { CtaYolo } from '.';
-import { AlternateStepComponent } from './';
+import { CtaYolo, Testimonial } from '.';
 import { classNames } from '../../utils';
+import { AlternateStepComponent } from './';
 
 const solutions = [
   {
