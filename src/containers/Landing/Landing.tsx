@@ -183,7 +183,7 @@ function classNames(...classes) {
 
 interface ILandingProps {}
 
-const Landing: FunctionComponent<ILandingProps> = (props) => {
+const Landing: FunctionComponent<ILandingProps> = () => {
   return (
     <div className='bg-white'>
       <header>
