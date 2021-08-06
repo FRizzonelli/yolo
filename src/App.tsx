@@ -1,5 +1,6 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BookYolo } from './containers/BookYolo';
 import { Landing } from './containers/Landing';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
           <Landing />
         </Route>
         <Route path='/book-yolo'>
-          <div />
+          <BookYolo />
         </Route>
       </Switch>
     </Router>
