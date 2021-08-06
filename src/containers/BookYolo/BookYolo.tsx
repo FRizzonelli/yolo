@@ -1,9 +1,10 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { CheckIcon } from '@heroicons/react/solid';
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { Link, Route, Switch, useHistory, useRouteMatch } from 'react-router-dom';
 import { classNames } from '../../utils';
+import { StepFour } from '../StepFour';
 import { StepOne } from '../StepOne';
+import { StepThree } from '../StepThree';
 import { StepTwo } from '../StepTwo';
 
 interface IBookYoloProps {}
@@ -163,25 +164,16 @@ const BookYolo: FunctionComponent<IBookYoloProps> = () => {
       <div className='max-w-7xl mx-auto sm:px-6 lg:px-8 mt-8'>
         <Switch>
           <Route path={`${match.path}/step-one`}>
-            <StepOne
-            // onCompleted={() =>
-            //   setSteps(
-            //     steps.map((s) =>
-            //       s.id === '01'
-            //         ? {
-            //             ...s,
-            //             status: 'complete',
-            //           }
-            //         : s.id === '02'
-            //         ? { ...s, status: 'current' }
-            //         : s
-            //     )
-            //   )
-            // }
-            />
+            <StepOne />
           </Route>
           <Route path={`${match.path}/step-two`}>
             <StepTwo />
+          </Route>
+          <Route path={`${match.path}/step-three`}>
+            <StepThree />
+          </Route>
+          <Route path={`${match.path}/step-four`}>
+            <StepFour />
           </Route>
         </Switch>
       </div>
