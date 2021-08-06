@@ -1,9 +1,19 @@
 import React, { FunctionComponent } from 'react';
+import { useHistory } from 'react-router-dom';
 
-interface IStepOneProps {}
+interface IStepOneProps {
+  onCompleted: () => void;
+}
 
-const StepOne: FunctionComponent<IStepOneProps> = () => {
-  const handleOnSubmit = () => {};
+const StepOne: FunctionComponent<IStepOneProps> = ({ onCompleted }) => {
+  const history = useHistory();
+
+  const handleOnSubmit = () => {
+    history.replace(`step-two`);
+
+    onCompleted();
+  };
+
   return (
     <div className='space-y-6'>
       <div className='bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6'>

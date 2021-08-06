@@ -1,21 +1,22 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { CheckIcon } from '@heroicons/react/solid';
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import { Link, Route, Switch, useRouteMatch } from 'react-router-dom';
 import { classNames } from '../../utils';
 import { StepOne } from '../StepOne';
-
-const steps = [
-  { id: '01', name: 'How many people', description: 'Vitae sed mi luctus laoreet.', to: '/', status: 'current' },
-  { id: '02', name: 'How long', description: 'Cursus semper viverra.', to: '/how-long', status: 'upcoming' },
-  { id: '03', name: 'When could you change', description: 'Penatibus eu quis ante.', to: '/when-could', status: 'upcoming' },
-  { id: '04', name: 'How would you move', description: 'Penatibus eu quis ante.', to: '/how-would', status: 'upcoming' },
-];
+import { StepTwo } from '../StepTwo';
 
 interface IBookYoloProps {}
 
 const BookYolo: FunctionComponent<IBookYoloProps> = () => {
   const match = useRouteMatch();
+
+  const [steps, setSteps] = useState([
+    { id: '01', name: 'How many people', description: 'Vitae sed mi luctus laoreet.', to: `${match.url}/step-one`, status: 'current' },
+    { id: '02', name: 'How long', description: 'Cursus semper viverra.', to: `${match.url}/step-two`, status: 'upcoming' },
+    { id: '03', name: 'When could you change', description: 'Penatibus eu quis ante.', to: `${match.url}/step-three`, status: 'upcoming' },
+    { id: '04', name: 'How would you move', description: 'Penatibus eu quis ante.', to: `${match.url}/step-four`, status: 'upcoming' },
+  ]);
 
   return (
     <div className='w-screen h-screen'>
@@ -102,10 +103,27 @@ const BookYolo: FunctionComponent<IBookYoloProps> = () => {
       </div>
       <div className='max-w-7xl mx-auto sm:px-6 lg:px-8 mt-8'>
         <Switch>
-          <Route path={`${match.path}`}>
-            <StepOne />
+          <Route path={`${match.path}/step-one`}>
+            <StepOne
+              onCompleted={() =>
+                setSteps(
+                  steps.map((s) =>
+                    s.id === '01'
+                      ? {
+                          ...s,
+                          status: 'complete',
+                        }
+                      : s.id === '02'
+                      ? { ...s, status: 'current' }
+                      : s
+                  )
+                )
+              }
+            />
           </Route>
-          <Route path={`${match.path}/step-two`}>{/* <StepTwo /> */}</Route>
+          <Route path={`${match.path}/step-two`}>
+            <StepTwo />
+          </Route>
         </Switch>
       </div>
     </div>
