@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import { Link } from 'react-router-dom';
 
 interface ICta {}
 
@@ -13,12 +14,12 @@ const CtaYolo: FunctionComponent<ICta> = () => {
         <p className='mt-4 text-lg leading-6 text-indigo-200'>
           Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.
         </p>
-        <a
-          href='#'
+        <Link
+          to='/book-yolo/step-one'
           className='mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto'
         >
           YOLO!
-        </a>
+        </Link>
       </div>
     </div>
   );
