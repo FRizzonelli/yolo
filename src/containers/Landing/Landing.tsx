@@ -1,19 +1,4 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ]
-  }
-  ```
-*/
+
 import { Popover, Transition } from '@headlessui/react';
 import {
   AnnotationIcon,
@@ -32,7 +17,7 @@ import {
   XIcon,
 } from '@heroicons/react/outline';
 import { ChevronDownIcon } from '@heroicons/react/solid';
-import { Fragment } from 'react';
+import { Fragment, FunctionComponent } from 'react';
 
 const solutions = [
   {
@@ -197,7 +182,10 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Example() {
+interface ILandingProps {
+}
+
+const Landing: FunctionComponent<ILandingProps> = (props) => {
   return (
     <div className='bg-white'>
       <header>
@@ -726,3 +714,5 @@ export default function Example() {
     </div>
   );
 }
+
+export default Landing;
