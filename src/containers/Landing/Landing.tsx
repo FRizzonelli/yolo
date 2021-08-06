@@ -118,6 +118,14 @@ const Landing: FunctionComponent<ILandingProps> = () => {
 
         {/* Alternating Step Sections */}
         <div className='relative pt-16 pb-32 overflow-hidden'>
+          <div className='relative'>
+            <p className='text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+              Take a crazy trip, with many locations, all known at last second.
+            </p>
+            <p className='text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+              Why? You keep a fresh mind and costs are dead low.
+            </p>
+          </div>
           <div aria-hidden='true' className='absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100' />
           <AlternateStepComponent
             icon={SparklesIcon}
