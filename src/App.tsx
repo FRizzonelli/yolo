@@ -1,18 +1,22 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BookYolo } from './containers/BookYolo';
 import { Landing } from './containers/Landing';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { YoloProvider } from './providers/YoloProvider';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path='/'>
-          <Landing />
-        </Route>
-        <Route path='/book-yolo'>
-          <div />
-        </Route>
-      </Switch>
-    </Router>
+    <YoloProvider>
+      <Router>
+        <Switch>
+          <Route exact path='/'>
+            <Landing />
+          </Route>
+          <Route path='/book-yolo'>
+            <BookYolo />
+          </Route>
+        </Switch>
+      </Router>
+    </YoloProvider>
   );
 }
 
