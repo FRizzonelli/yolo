@@ -1,8 +1,14 @@
 import { FunctionComponent } from 'react';
 
+// const TestimonialObj = {
+//   name: 'Massimo Frasson',
+//   quote: 'Yolerei subito\nAc tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+//   role: 'CTO Strelka Games',
+// };
+
 interface ITestimonial {}
 
-const Testimonial: FunctionComponent<ITestimonial> = (props) => {
+const Testimonial: FunctionComponent<ITestimonial> = () => {
   return (
     <div className='bg-white pt-16 lg:py-24'>
       <div className='pb-16 bg-indigo-600 lg:pb-0 lg:z-10 lg:relative'>
