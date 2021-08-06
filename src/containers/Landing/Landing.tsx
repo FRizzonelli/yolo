@@ -8,13 +8,6 @@ import { AlternateStepComponent } from './';
 
 interface ILandingProps {}
 
-const StepContent = [
-  {
-    description: 'You’ll receive further stops informations as you go!',
-    icon: SparklesIcon,
-  },
-];
-
 const Landing: FunctionComponent<ILandingProps> = () => {
   const yoloCtx = useYoloContext();
 

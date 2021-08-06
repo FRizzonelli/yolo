@@ -9,8 +9,8 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
 
   const yoloCtx = useYoloContext();
 
-  const [adults, setAdults] = useState(1);
-  const [kids, setKids] = useState<number>();
+  const [adults, setAdults] = useState(yoloCtx.bookYolo?.adults || 1);
+  const [kids, setKids] = useState(yoloCtx.bookYolo?.kids || 0);
 
   const handleOnSubmit = () => {
     yoloCtx.setBookYolo({

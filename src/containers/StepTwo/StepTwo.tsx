@@ -10,8 +10,8 @@ const StepTwo: FunctionComponent<IStepTwoProps> = () => {
 
   const yoloCtx = useYoloContext();
 
-  const [weeks, setWeeks] = useState(3);
-  const [startDate, setStartDate] = useState(new Date());
+  const [weeks, setWeeks] = useState(yoloCtx.bookYolo?.weeks || 3);
+  const [startDate, setStartDate] = useState(yoloCtx.bookYolo?.startDate || new Date());
 
   const handleOnSubmit = () => {
     yoloCtx.setBookYolo({

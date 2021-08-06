@@ -69,6 +69,13 @@ const BookYolo: FunctionComponent<IBookYoloProps> = () => {
           )
         );
         break;
+      case '/book-yolo/confirm':
+        setSteps(
+          steps.map((s) => {
+            return { ...s, status: 'complete' };
+          })
+        );
+        break;
     }
   }, [history.location.pathname]);
 
