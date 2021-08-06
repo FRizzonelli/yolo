@@ -48,7 +48,14 @@ const StepTwo: FunctionComponent<IStepTwoProps> = () => {
                     id='weeks'
                     className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300'
                     value={weeks}
-                    onChange={(e) => setWeeks(Number(e.currentTarget.value))}
+                    onChange={(e) => {
+                      setWeeks(Number(e.currentTarget.value));
+
+                      yoloCtx.setBookYolo({
+                        ...yoloCtx.bookYolo,
+                        weeks: Number(e.currentTarget.value),
+                      });
+                    }}
                   />
                 </div>
               </div>
@@ -62,9 +69,18 @@ const StepTwo: FunctionComponent<IStepTwoProps> = () => {
                     id='starting-from'
                     // className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300'
                     selected={startDate}
-                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                    // @ts-ignore
-                    onChange={(date) => setStartDate(date)}
+                    onChange={(date) => {
+                      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                      // @ts-ignore
+                      setStartDate(date);
+
+                      yoloCtx.setBookYolo({
+                        ...yoloCtx.bookYolo,
+                        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                        // @ts-ignore
+                        startDate: date,
+                      });
+                    }}
                     selectsStart
                     startDate={startDate}
                     minDate={new Date()}

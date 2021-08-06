@@ -47,7 +47,14 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
                     id='adults'
                     className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300'
                     value={adults}
-                    onChange={(e) => setAdults(Number(e.currentTarget.value))}
+                    onChange={(e) => {
+                      setAdults(Number(e.currentTarget.value));
+
+                      yoloCtx.setBookYolo({
+                        ...yoloCtx.bookYolo,
+                        adults: Number(e.currentTarget.value),
+                      });
+                    }}
                   />
                 </div>
               </div>
@@ -63,7 +70,14 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
                     id='kids'
                     className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300'
                     value={kids}
-                    onChange={(e) => setKids(Number(e.currentTarget.value))}
+                    onChange={(e) => {
+                      setKids(Number(e.currentTarget.value));
+
+                      yoloCtx.setBookYolo({
+                        ...yoloCtx.bookYolo,
+                        kids: Number(e.currentTarget.value),
+                      });
+                    }}
                   />
                 </div>
                 <p className='mt-2 text-sm text-gray-500'>Kids are awesome</p>
