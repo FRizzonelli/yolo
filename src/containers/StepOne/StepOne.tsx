@@ -2,16 +2,16 @@ import React, { FunctionComponent } from 'react';
 import { useHistory } from 'react-router-dom';
 
 interface IStepOneProps {
-  onCompleted: () => void;
+  onCompleted?: () => void;
 }
 
-const StepOne: FunctionComponent<IStepOneProps> = ({ onCompleted }) => {
+const StepOne: FunctionComponent<IStepOneProps> = () => {
   const history = useHistory();
 
   const handleOnSubmit = () => {
     history.replace(`step-two`);
 
-    onCompleted();
+    // onCompleted();
   };
 
   return (

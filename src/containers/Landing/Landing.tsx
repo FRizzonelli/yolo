@@ -2,7 +2,9 @@ import { Popover, Transition } from '@headlessui/react';
 import { AnnotationIcon, ChatAlt2Icon, InboxIcon, MenuIcon, QuestionMarkCircleIcon, XIcon } from '@heroicons/react/outline';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 import { Fragment, FunctionComponent } from 'react';
-import Testimonial from './Testimonial';
+import { Link } from 'react-router-dom';
+import { Testimonial } from '.';
+import { classNames } from '../../utils';
 
 const solutions = [
   {
@@ -115,10 +117,6 @@ const footerNavigation = {
     },
   ],
 };
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
 
 interface ILandingProps {}
 
@@ -309,12 +307,12 @@ const Landing: FunctionComponent<ILandingProps> = () => {
                   <span className='block text-indigo-200'>for smart workers</span>
                 </h1>
                 <div className='mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center'>
-                  <a
-                    href='#'
+                  <Link
+                    to='/book-yolo/step-one'
                     className='flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8'
                   >
                     YOLO!
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { CheckIcon } from '@heroicons/react/solid';
-import React, { FunctionComponent, useState } from 'react';
-import { Link, Route, Switch, useRouteMatch } from 'react-router-dom';
+import React, { FunctionComponent, useEffect, useState } from 'react';
+import { Link, Route, Switch, useHistory, useRouteMatch } from 'react-router-dom';
 import { classNames } from '../../utils';
 import { StepOne } from '../StepOne';
 import { StepTwo } from '../StepTwo';
@@ -10,6 +10,65 @@ interface IBookYoloProps {}
 
 const BookYolo: FunctionComponent<IBookYoloProps> = () => {
   const match = useRouteMatch();
+
+  const history = useHistory();
+
+  useEffect(() => {
+    switch (history.location.pathname) {
+      case '/book-yolo/step-one':
+        setSteps(
+          steps.map((s) =>
+            s.id === '01'
+              ? {
+                  ...s,
+                  status: 'current',
+                }
+              : { ...s, status: 'upcoming' }
+          )
+        );
+        break;
+      case '/book-yolo/step-two':
+        setSteps(
+          steps.map((s) =>
+            s.id === '02'
+              ? {
+                  ...s,
+                  status: 'current',
+                }
+              : s.id === '01'
+              ? { ...s, status: 'complete' }
+              : { ...s, status: 'upcoming' }
+          )
+        );
+        break;
+      case '/book-yolo/step-three':
+        setSteps(
+          steps.map((s) =>
+            s.id === '03'
+              ? {
+                  ...s,
+                  status: 'current',
+                }
+              : s.id === '02' || s.id === '01'
+              ? { ...s, status: 'complete' }
+              : { ...s, status: 'upcoming' }
+          )
+        );
+        break;
+      case '/book-yolo/step-four':
+        setSteps(
+          steps.map((s) =>
+            s.id === '04'
+              ? {
+                  ...s,
+                  status: 'current',
+                }
+              : { ...s, status: 'complete' }
+          )
+        );
+        break;
+    }
+  }, [history.location.pathname]);
 
   const [steps, setSteps] = useState([
     { id: '01', name: 'How many people', description: 'Vitae sed mi luctus laoreet.', to: `${match.url}/step-one`, status: 'current' },
@@ -105,20 +164,20 @@ const BookYolo: FunctionComponent<IBookYoloProps> = () => {
         <Switch>
           <Route path={`${match.path}/step-one`}>
             <StepOne
-              onCompleted={() =>
-                setSteps(
-                  steps.map((s) =>
-                    s.id === '01'
-                      ? {
-                          ...s,
-                          status: 'complete',
-                        }
-                      : s.id === '02'
-                      ? { ...s, status: 'current' }
-                      : s
-                  )
-                )
-              }
+            // onCompleted={() =>
+            //   setSteps(
+            //     steps.map((s) =>
+            //       s.id === '01'
+            //         ? {
+            //             ...s,
+            //             status: 'complete',
+            //           }
+            //         : s.id === '02'
+            //         ? { ...s, status: 'current' }
+            //         : s
+            //     )
+            //   )
+            // }
             />
           </Route>
           <Route path={`${match.path}/step-two`}>
