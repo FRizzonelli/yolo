@@ -1,17 +1,13 @@
 import React, { FunctionComponent } from 'react';
 import { useHistory } from 'react-router-dom';
 
-interface IStepOneProps {
-  onCompleted?: () => void;
-}
+interface IStepOneProps {}
 
 const StepOne: FunctionComponent<IStepOneProps> = () => {
   const history = useHistory();
 
   const handleOnSubmit = () => {
     history.replace(`step-two`);
-
-    // onCompleted();
   };
 
   return (
@@ -24,20 +20,18 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
           </div>
           <div className='mt-5 md:mt-0 md:col-span-2'>
             <form className='space-y-6' action='#' method='POST'>
-              <div className='grid grid-cols-3 gap-6'>
-                <div className='col-span-3 sm:col-span-2'>
-                  <label htmlFor='adults' className='block text-sm font-medium text-gray-700'>
-                    Adults
-                  </label>
-                  <div className='mt-1 flex rounded-md shadow-sm'>
-                    <input
-                      type='number'
-                      name='adults'
-                      id='adults'
-                      className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300'
-                      placeholder='1'
-                    />
-                  </div>
+              <div className=''>
+                <label htmlFor='adults' className='block text-sm font-medium text-gray-700'>
+                  Adults
+                </label>
+                <div className='mt-1 flex rounded-md shadow-sm'>
+                  <input
+                    type='number'
+                    name='adults'
+                    id='adults'
+                    className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300'
+                    placeholder='1'
+                  />
                 </div>
               </div>
 

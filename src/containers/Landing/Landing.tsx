@@ -2,8 +2,7 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, SparklesIcon } from '@heroicons/react/outline';
 import { Fragment, FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
-import { Testimonial } from '.';
-import { CtaYolo } from '.';
+import { CtaYolo, Testimonial } from '.';
 import { AlternateStepComponent } from './';
 
 interface ILandingProps {}
