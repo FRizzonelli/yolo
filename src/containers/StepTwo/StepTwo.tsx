@@ -1,14 +1,16 @@
-import React, { FunctionComponent } from 'react';
-import { useHistory, useRouteMatch } from 'react-router-dom';
+import React, { FunctionComponent, useState } from 'react';
+import DatePicker from 'react-datepicker';
+import { useHistory } from 'react-router-dom';
 
 interface IStepTwoProps {}
 
 const StepTwo: FunctionComponent<IStepTwoProps> = () => {
-  const match = useRouteMatch();
   const history = useHistory();
 
+  const [startDate, setStartDate] = useState(new Date());
+
   const handleOnSubmit = () => {
-    history.push(`${match.path}/step-three`);
+    history.replace(`step-three`);
   };
 
   return (
@@ -21,7 +23,7 @@ const StepTwo: FunctionComponent<IStepTwoProps> = () => {
           </div>
           <div className='mt-5 md:mt-0 md:col-span-2'>
             <form className='space-y-6' action='#' method='POST'>
-              <div className=''>
+              <div>
                 <label htmlFor='weeks' className='block text-sm font-medium text-gray-700'>
                   Weeks
                 </label>
@@ -32,6 +34,28 @@ const StepTwo: FunctionComponent<IStepTwoProps> = () => {
                     id='weeks'
                     className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300'
                     placeholder='1'
+                  />
+                </div>
+              </div>
+              <div>
+                <label htmlFor='starting-from' className='block text-sm font-medium text-gray-700'>
+                  Starting from
+                </label>
+                <div className='mt-1 flex rounded-md shadow-sm'>
+                  <DatePicker
+                    name='starting-from'
+                    id='starting-from'
+                    // className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300'
+                    selected={startDate}
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore
+                    onChange={(date) => setStartDate(date)}
+                    selectsStart
+                    startDate={startDate}
+                    minDate={new Date()}
+                    dateFormat='dd/MM/yyyy'
+                    nextMonthButtonLabel='>'
+                    previousMonthButtonLabel='<'
                   />
                 </div>
               </div>
