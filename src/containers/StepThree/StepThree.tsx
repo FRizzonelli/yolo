@@ -1,16 +1,29 @@
 import React, { FunctionComponent } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useYoloContext } from '../../hooks/useYoloContext';
 
 interface IStepThreeProps {}
 
 const StepThree: FunctionComponent<IStepThreeProps> = () => {
   const history = useHistory();
 
+  const yoloCtx = useYoloContext();
+
   const handleOnWeekendsClicked = () => {
+    yoloCtx.setBookYolo({
+      ...yoloCtx.bookYolo,
+      leaveOn: 'weekends',
+    });
+
     history.replace(`step-four`);
   };
 
   const handleOnAnytimeClicked = () => {
+    yoloCtx.setBookYolo({
+      ...yoloCtx.bookYolo,
+      leaveOn: 'anytime',
+    });
+
     history.replace(`step-four`);
   };
 

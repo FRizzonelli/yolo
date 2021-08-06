@@ -1,15 +1,25 @@
 import React, { FunctionComponent, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useHistory } from 'react-router-dom';
+import { useYoloContext } from '../../hooks/useYoloContext';
 
 interface IStepTwoProps {}
 
 const StepTwo: FunctionComponent<IStepTwoProps> = () => {
   const history = useHistory();
 
+  const yoloCtx = useYoloContext();
+
+  const [weeks, setWeeks] = useState(3);
   const [startDate, setStartDate] = useState(new Date());
 
   const handleOnSubmit = () => {
+    yoloCtx.setBookYolo({
+      ...yoloCtx.bookYolo,
+      weeks,
+      startDate,
+    });
+
     history.replace(`step-three`);
   };
 
@@ -33,7 +43,8 @@ const StepTwo: FunctionComponent<IStepTwoProps> = () => {
                     name='weeks'
                     id='weeks'
                     className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300'
-                    placeholder='1'
+                    value={weeks}
+                    onChange={(e) => setWeeks(Number(e.currentTarget.value))}
                   />
                 </div>
               </div>
