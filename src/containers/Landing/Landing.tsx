@@ -8,6 +8,13 @@ import { AlternateStepComponent } from './';
 
 interface ILandingProps {}
 
+const StepContent = [
+  {
+    description: 'You’ll receive further stops informations as you go!',
+    icon: SparklesIcon,
+  },
+];
+
 const Landing: FunctionComponent<ILandingProps> = () => {
   const yoloCtx = useYoloContext();
 
@@ -123,22 +130,31 @@ const Landing: FunctionComponent<ILandingProps> = () => {
             icon={SparklesIcon}
             side='r'
             image='https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg'
-            description='Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra
-                  duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.'
+            description='You tell us how flexibile you are'
           />
           <AlternateStepComponent
             icon={SparklesIcon}
             side='l'
             image='https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg'
-            description='Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra
-                  duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.'
+            description='You pick a kind of location you like'
           />
           <AlternateStepComponent
             icon={SparklesIcon}
             side='r'
             image='https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg'
-            description='Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra
-                  duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.'
+            description='You onboard on a working trip with different locations, all known at last second so your mind stays fresh and we can keep the costs lower for you'
+          />
+          <AlternateStepComponent
+            icon={SparklesIcon}
+            side='l'
+            image='https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg'
+            description='A few days before the trip we give you the plan for the first location you will go'
+          />
+          <AlternateStepComponent
+            icon={SparklesIcon}
+            side='r'
+            image='https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg'
+            description='You’ll receive further stops informations as you go!'
           />
         </div>
 
