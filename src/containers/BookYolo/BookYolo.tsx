@@ -2,6 +2,7 @@ import { CheckIcon } from '@heroicons/react/solid';
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { Link, Route, Switch, useHistory, useRouteMatch } from 'react-router-dom';
 import { classNames } from '../../utils';
+import { ConfirmYolo } from '../ConfirmYolo';
 import { StepFour } from '../StepFour';
 import { StepOne } from '../StepOne';
 import { StepThree } from '../StepThree';
@@ -174,6 +175,9 @@ const BookYolo: FunctionComponent<IBookYoloProps> = () => {
           </Route>
           <Route path={`${match.path}/step-four`}>
             <StepFour />
+          </Route>
+          <Route path={`${match.path}/confirm`}>
+            <ConfirmYolo />
           </Route>
         </Switch>
       </div>

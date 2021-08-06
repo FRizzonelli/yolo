@@ -1,12 +1,24 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useYoloContext } from '../../hooks/useYoloContext';
 
 interface IStepOneProps {}
 
 const StepOne: FunctionComponent<IStepOneProps> = () => {
   const history = useHistory();
 
+  const yoloCtx = useYoloContext();
+
+  const [adults, setAdults] = useState(1);
+  const [kids, setKids] = useState<number>();
+
   const handleOnSubmit = () => {
+    yoloCtx.setBookYolo({
+      ...yoloCtx.bookYolo,
+      adults,
+      kids,
+    });
+
     history.replace(`step-two`);
   };
 
@@ -30,7 +42,8 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
                     name='adults'
                     id='adults'
                     className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300'
-                    placeholder='1'
+                    value={adults}
+                    onChange={(e) => setAdults(Number(e.currentTarget.value))}
                   />
                 </div>
               </div>
@@ -42,10 +55,11 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
                 <div className='mt-1'>
                   <input
                     type='number'
-                    name='adults'
-                    id='adults'
+                    name='kids'
+                    id='kids'
                     className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300'
-                    placeholder='0'
+                    value={kids}
+                    onChange={(e) => setKids(Number(e.currentTarget.value))}
                   />
                 </div>
                 <p className='mt-2 text-sm text-gray-500'>Kids are awesome</p>

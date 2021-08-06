@@ -1,16 +1,29 @@
 import React, { FunctionComponent } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useYoloContext } from '../../hooks/useYoloContext';
 
 interface IStepFourProps {}
 
 const StepFour: FunctionComponent<IStepFourProps> = () => {
   const history = useHistory();
 
+  const yoloCtx = useYoloContext();
+
   const handleOnCarClicked = () => {
+    yoloCtx.setBookYolo({
+      ...yoloCtx.bookYolo,
+      transport: 'car',
+    });
+
     history.replace('confirm');
   };
 
   const handleOnPublicTransportClicked = () => {
+    yoloCtx.setBookYolo({
+      ...yoloCtx.bookYolo,
+      transport: 'public',
+    });
+
     history.replace('confirm');
   };
 
