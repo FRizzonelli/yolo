@@ -53,7 +53,7 @@ const YoloConfirmed: FunctionComponent<IYoloConfirmedProps> = () => {
           </div>
           <div className='flex flex-col items-center'>
             <button className='mt-16 w-96 h-20 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-2xl font-bold items-center rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
-              Yolo!
+              YOLO!
             </button>
           </div>
         </div>
