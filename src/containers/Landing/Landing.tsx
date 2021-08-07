@@ -13,6 +13,7 @@ const Landing: FunctionComponent<ILandingProps> = () => {
 
   const onStartBookYoloClicked = () => {
     yoloCtx.setBookYolo({});
+    yoloCtx.setConfirmedYolo(undefined);
   };
 
   return (

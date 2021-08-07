@@ -7,6 +7,7 @@ import { StepFour } from '../StepFour';
 import { StepOne } from '../StepOne';
 import { StepThree } from '../StepThree';
 import { StepTwo } from '../StepTwo';
+import { YoloConfirmed } from '../YoloConfirmed';
 
 interface IBookYoloProps {}
 
@@ -182,6 +183,9 @@ const BookYolo: FunctionComponent<IBookYoloProps> = () => {
           </Route>
           <Route path={`${match.path}/confirm`}>
             <ConfirmYolo />
+          </Route>
+          <Route path={`${match.path}/yolo-confirmed`}>
+            <YoloConfirmed />
           </Route>
         </Switch>
       </div>
