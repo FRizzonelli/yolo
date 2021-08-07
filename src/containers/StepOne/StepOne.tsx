@@ -31,12 +31,12 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
       <div className='bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6 h-96 flex flex-col justify-evenly'>
         <div className='md:col-span-1 mb-4 text-center'>
           <h2 className='text-3xl tracking-tight font-extrabold text-gray-900'>How many people?</h2>
-          <p className='text-lg mt-1 text-gray-500'>This are your roadtrip mates! Whatudp dawg?</p>
+          <p className='text-lg mt-1 text-gray-500'>People you are YOLOing with</p>
         </div>
         <div className='mt-5 md:mt-0 md:col-span-2'>
           <form className='space-y-6' action='#' method='POST'>
             <div>
-              <label htmlFor='adults' className='block text-sm font-medium text-gray-700'>
+              <label htmlFor='adults' className='block text-lg font-medium text-gray-700'>
                 Adults
               </label>
               <div className='mt-1 flex rounded-md shadow-sm'>
@@ -59,7 +59,7 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
             </div>
 
             <div>
-              <label htmlFor='kids' className='block text-sm font-medium text-gray-700'>
+              <label htmlFor='kids' className='block text-lg font-medium text-gray-700'>
                 Kids
               </label>
               <div className='mt-1'>
@@ -79,7 +79,7 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
                   }}
                 />
               </div>
-              <p className='mt-2 text-sm text-gray-500'>Kids are awesome</p>
+              <p className='mt-2 text-sm text-gray-500'>Tip: Don&apos;t abandon 🐕 for travelling</p>
             </div>
           </form>
         </div>

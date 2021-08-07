@@ -36,7 +36,7 @@ const StepFour: FunctionComponent<IStepFourProps> = () => {
       <div className='bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6 h-96 flex flex-col justify-evenly'>
         <div className='md:col-span-1 mb-4 text-center'>
           <h3 className='text-3xl tracking-tight font-extrabold text-gray-900'>How would you move?</h3>
-          <p className='mt-1 text-lg text-gray-500'>Plz go green 🌲</p>
+          <p className='mt-1 text-lg text-gray-500'>We plan it for you 🌲</p>
         </div>
         <div className='mt-5 md:mt-0 md:col-span-2 flex justify-evenly'>
           <button

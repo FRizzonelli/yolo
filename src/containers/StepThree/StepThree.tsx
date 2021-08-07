@@ -36,7 +36,7 @@ const StepThree: FunctionComponent<IStepThreeProps> = () => {
       <div className='bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6 h-96 flex flex-col justify-evenly'>
         <div className='md:col-span-1 mb-4 text-center'>
           <h2 className='text-3xl tracking-tight font-extrabold text-gray-900'>Which days could you change location at any time?</h2>
-          <p className='text-lg mt-1 text-gray-500'>Come on brah</p>
+          <p className='text-lg mt-1 text-gray-500'>Don’t worry, 5 days per place minimum!</p>
         </div>
         <div className='mt-5 md:mt-0 md:col-span-2 flex justify-evenly'>
           <button
