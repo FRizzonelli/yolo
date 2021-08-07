@@ -8,7 +8,7 @@ const CtaYolo: FunctionComponent<ICta> = () => {
     <div className='bg-indigo-700'>
       <div className='max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8'>
         <h2 className='text-3xl font-extrabold text-white sm:text-4xl'>
-          <span className='block'>Start plan your trip.</span>
+          <span className='block'>Ready for your next trip?</span>
         </h2>
         <Link
           to='/book-yolo/step-one'

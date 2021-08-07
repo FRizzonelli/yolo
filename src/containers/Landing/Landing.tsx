@@ -169,12 +169,7 @@ const Landing: FunctionComponent<ILandingProps> = () => {
         {/* Cta Section*/}
         <CtaYolo />
         {/* Testimonial Section */}
-        <Testimonial
-          quote='YOLOerei subito. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae.
-                  Numquam corrupti in laborum sed rerum et corporis.'
-          name='Massimo Frasson'
-          role='Product Manager, Strelka Games Srl'
-        />
+        <Testimonial quote='YOLOerei subito!' name='Alexa Frasson' role='Product Manager, Strelka Games Srl' />
       </main>
 
       <footer className='bg-gray-50' aria-labelledby='footer-heading'>
