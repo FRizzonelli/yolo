@@ -35,9 +35,9 @@ const StepTwo: FunctionComponent<IStepTwoProps> = () => {
           <p className='mt-1 text-lg text-gray-500'>Remember: minimun 3 weeks!</p>
         </div>
         <div className='mt-5 md:mt-0 md:col-span-2'>
-          <form className='space-y-6' action='#' method='POST'>
+          <form className='space-y-6 px-72' action='#' method='POST'>
             <div>
-              <label htmlFor='weeks' className='block text-sm font-medium text-gray-700'>
+              <label htmlFor='weeks' className='block text-lg font-medium text-gray-700'>
                 Weeks
               </label>
               <div className='mt-1 flex rounded-md shadow-sm'>
@@ -45,7 +45,7 @@ const StepTwo: FunctionComponent<IStepTwoProps> = () => {
                   type='number'
                   name='weeks'
                   id='weeks'
-                  className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300'
+                  className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md sm:text-sm border-gray-300'
                   value={weeks}
                   onChange={(e) => {
                     setWeeks(Number(e.currentTarget.value));
@@ -59,7 +59,7 @@ const StepTwo: FunctionComponent<IStepTwoProps> = () => {
               </div>
             </div>
             <div>
-              <label htmlFor='starting-from' className='block text-sm font-medium text-gray-700'>
+              <label htmlFor='starting-from' className='block text-lg font-medium text-gray-700'>
                 Starting from
               </label>
               <div className='mt-1 flex rounded-md shadow-sm'>

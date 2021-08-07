@@ -10,9 +10,6 @@ const CtaYolo: FunctionComponent<ICta> = () => {
         <h2 className='text-3xl font-extrabold text-white sm:text-4xl'>
           <span className='block'>Start plan your trip.</span>
         </h2>
-        {/* <p className='mt-4 text-lg leading-6 text-indigo-200'>
-          Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.
-        </p> */}
         <Link
           to='/book-yolo/step-one'
           className='mt-8 inline-flex items-center justify-center w-64 px-6 py-5 border border-transparent text-2xl font-extrabold rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8'

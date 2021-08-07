@@ -108,7 +108,7 @@ const Landing: FunctionComponent<ILandingProps> = () => {
                   <Link
                     to='/book-yolo/step-one'
                     onClick={onStartBookYoloClicked}
-                    className='flex items-center justify-center 
+                    className='flex items-center justify-center w-64 px-6 py-5
                      border border-transparent text-2xl font-extrabold rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8'
                   >
                     YOLO!
@@ -172,7 +172,7 @@ const Landing: FunctionComponent<ILandingProps> = () => {
           quote='YOLOerei subito. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae.
                   Numquam corrupti in laborum sed rerum et corporis.'
           name='Massimo Frasson'
-          role='Product Manager, Strelka Games srl'
+          role='Product Manager, Strelka Games Srl'
         />
       </main>
 

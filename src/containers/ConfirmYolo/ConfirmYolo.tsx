@@ -15,18 +15,6 @@ const ConfirmYolo: FunctionComponent<IConfirmYoloProps> = () => {
       price: 750,
       imageUrl: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
     },
-    {
-      title: 'Alps',
-      period: '7 Aug - 15 Sep',
-      price: 750,
-      imageUrl: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
-    },
-    {
-      title: 'Alps',
-      period: '7 Aug - 15 Sep',
-      price: 750,
-      imageUrl: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
-    },
   ];
 
   const yoloCtx = useYoloContext();
@@ -57,7 +45,7 @@ const ConfirmYolo: FunctionComponent<IConfirmYoloProps> = () => {
 
       <div className='relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
         <div className='absolute inset-0'>
-          <div className='bg-white h-1/3 sm:h-2/3' />
+          <div className='bg-white h-2/4' />
         </div>
         <div className='relative max-w-7xl mx-auto'>
           <div className='text-center'>

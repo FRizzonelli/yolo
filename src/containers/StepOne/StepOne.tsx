@@ -34,7 +34,7 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
           <p className='text-lg mt-1 text-gray-500'>People you are YOLOing with</p>
         </div>
         <div className='mt-5 md:mt-0 md:col-span-2'>
-          <form className='space-y-6' action='#' method='POST'>
+          <form className='space-y-6 px-72' action='#' method='POST'>
             <div>
               <label htmlFor='adults' className='block text-lg font-medium text-gray-700'>
                 Adults
@@ -44,7 +44,7 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
                   type='number'
                   name='adults'
                   id='adults'
-                  className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300'
+                  className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md sm:text-sm border-gray-300'
                   value={adults}
                   onChange={(e) => {
                     setAdults(Number(e.currentTarget.value));
@@ -67,7 +67,7 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
                   type='number'
                   name='kids'
                   id='kids'
-                  className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300'
+                  className='focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md sm:text-sm border-gray-300'
                   value={kids}
                   onChange={(e) => {
                     setKids(Number(e.currentTarget.value));

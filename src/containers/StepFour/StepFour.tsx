@@ -45,13 +45,16 @@ const StepFour: FunctionComponent<IStepFourProps> = () => {
           >
             Car
           </button>
-          <button
-            type='submit'
-            onClick={handleOnPublicTransportClicked}
-            className='ml-3 w-60 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-          >
-            Public Transport
-          </button>
+          <div className='relative'>
+            <button
+              type='submit'
+              onClick={handleOnPublicTransportClicked}
+              className='ml-3 w-60 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+            >
+              Public Transport
+            </button>
+            <img src='/greener.png' className='absolute -mt-8 -right-20 w-36' />
+          </div>
         </div>
       </div>
 
