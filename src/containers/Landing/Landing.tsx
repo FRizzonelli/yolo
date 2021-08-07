@@ -123,10 +123,11 @@ const Landing: FunctionComponent<ILandingProps> = () => {
         <div className='relative pt-16 pb-32 overflow-hidden'>
           <div className='relative'>
             <p className='text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
-              Take a crazy trip, with many locations, all known at last second.
+              Take a <span className='text-indigo-700'>crazy trip</span>, with <span className='text-indigo-700'>many locations</span>, all known at{' '}
+              <span className='text-indigo-700'>last second</span>.
             </p>
             <p className='text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
-              Why? You keep a fresh mind and costs are dead low.
+              Why? You keep a <span className='text-indigo-700'>fresh mind</span> and <span className='text-indigo-700'>costs are dead low</span>.
             </p>
           </div>
           <div>
