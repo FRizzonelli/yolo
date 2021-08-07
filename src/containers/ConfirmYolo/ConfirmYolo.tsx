@@ -7,20 +7,10 @@ const ConfirmYolo: FunctionComponent<IConfirmYoloProps> = () => {
   const yolos = [
     {
       title: 'Boost your conversion rate',
-      href: '#',
       category: { name: 'Article', href: '#' },
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.',
-      date: 'Mar 16, 2020',
-      datetime: '2020-03-16',
+      period: '7 Aug - 15 Sep',
+      price: 750,
       imageUrl: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
-      readingTime: '6 min',
-      author: {
-        name: 'Roel Aufderehar',
-        href: '#',
-        imageUrl:
-          'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      },
     },
     {
       title: 'How to use search engine optimization to drive sales',
@@ -63,9 +53,10 @@ const ConfirmYolo: FunctionComponent<IConfirmYoloProps> = () => {
   return (
     <div className='space-y-6'>
       <div className='inline-flex items-center'>
+        <p className='text-lg text-gray-900 mr-6'>Your setup: </p>
         <span className='inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-yellow-100 text-yellow-800 mr-2'>{`${
           yoloCtx.bookYolo?.adults
-        } 👩🏽 ${yoloCtx.bookYolo?.kids ? yoloCtx.bookYolo?.kids + ' 👶' : ''}`}</span>
+        } Adults 👩🏽 ${yoloCtx.bookYolo?.kids ? yoloCtx.bookYolo?.kids + ' Kids 👶' : ''}`}</span>
         <span className='inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-yellow-100 text-yellow-800 mr-2'>{`${yoloCtx.bookYolo?.weeks} Weeks`}</span>
         <span className='inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-yellow-100 text-yellow-800 mr-2'>
           {yoloCtx.bookYolo?.leaveOn === 'weekends' ? 'Weekends' : 'Change any time'}
@@ -82,9 +73,8 @@ const ConfirmYolo: FunctionComponent<IConfirmYoloProps> = () => {
         <div className='relative max-w-7xl mx-auto'>
           <div className='text-center'>
             <h2 className='text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl'>Ready to YOLO!</h2>
-            <p className='mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4'>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
-            </p>
+            <p className='mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4'>This are your beautiful Yolo&apos;s!</p>
+            <p className='max-w-2xl mx-auto text-xl text-gray-500 sm:mt-1'> Choose one to proceed!</p>
           </div>
           <div className='mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none'>
             {yolos.map((yolo) => (
@@ -94,39 +84,21 @@ const ConfirmYolo: FunctionComponent<IConfirmYoloProps> = () => {
                 </div>
                 <div className='flex-1 bg-white p-6 flex flex-col justify-between'>
                   <div className='flex-1'>
-                    <p className='text-sm font-medium text-indigo-600'>
-                      <a href={yolo.category.href} className='hover:underline'>
-                        {yolo.category.name}
-                      </a>
-                    </p>
                     <a href={yolo.href} className='block mt-2'>
                       <p className='text-xl font-semibold text-gray-900'>{yolo.title}</p>
-                      <p className='mt-3 text-base text-gray-500'>{yolo.description}</p>
+                      <p className='mt-3 text-lg text-gray-500'>{yolo.period}</p>
+                      <p className='mt-3 text-lg text-gray-500'>{`${yolo.price} €`}</p>
                     </a>
-                  </div>
-                  <div className='mt-6 flex items-center'>
-                    <div className='flex-shrink-0'>
-                      <a href={yolo.author.href}>
-                        <span className='sr-only'>{yolo.author.name}</span>
-                        <img className='h-10 w-10 rounded-full' src={yolo.author.imageUrl} alt='' />
-                      </a>
-                    </div>
-                    <div className='ml-3'>
-                      <p className='text-sm font-medium text-gray-900'>
-                        <a href={yolo.author.href} className='hover:underline'>
-                          {yolo.author.name}
-                        </a>
-                      </p>
-                      <div className='flex space-x-1 text-sm text-gray-500'>
-                        <time dateTime={yolo.datetime}>{yolo.date}</time>
-                        <span aria-hidden='true'>&middot;</span>
-                        <span>{yolo.readingTime} read</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+          <div className='flex flex-col items-center'>
+            <button className='mt-16 w-96 h-20 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-2xl font-bold items-center rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
+              Reroll 🎲
+            </button>
+            <p className='mt-12 underline'>Get notified when new Yolo&apos;s option are available</p>
           </div>
         </div>
       </div>
