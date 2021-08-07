@@ -15,7 +15,7 @@
 }
 
 .react-datepicker-popper {
-  @apply absolute top-10 z-10 left-0 w-72 text-sm transform-none bg-white shadow px-3 py-2 !important;
+  @apply absolute z-10 left-0 w-72 text-sm transform-none bg-white shadow px-3 py-2 !important;
 }
 
 .react-datepicker__month-container {

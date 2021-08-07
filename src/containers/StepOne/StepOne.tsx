@@ -34,7 +34,7 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
           <p className='text-lg mt-1 text-gray-500'>People you are YOLOing with</p>
         </div>
         <div className='mt-5 md:mt-0 md:col-span-2'>
-          <form className='space-y-6 px-72' action='#' method='POST'>
+          <form className='space-y-6 md:px-72' action='#' method='POST'>
             <div>
               <label htmlFor='adults' className='block text-lg font-medium text-gray-700'>
                 Adults
@@ -85,7 +85,7 @@ const StepOne: FunctionComponent<IStepOneProps> = () => {
         </div>
       </div>
 
-      <div className='flex justify-between'>
+      <div className='flex justify-between pb-4 px-4 md:px-0'>
         <button
           onClick={handleOnPrevClicked}
           className='mr-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-36'

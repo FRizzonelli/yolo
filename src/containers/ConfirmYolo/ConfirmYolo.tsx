@@ -1,8 +1,8 @@
+import { sampleSize } from 'lodash';
 import React, { FunctionComponent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useYoloContext } from '../../hooks/useYoloContext';
 import { Yolo } from '../../models/bookyolo';
-import { sampleSize } from 'lodash';
 
 interface IConfirmYoloProps {}
 
@@ -73,7 +73,7 @@ const ConfirmYolo: FunctionComponent<IConfirmYoloProps> = () => {
 
   return (
     <div className='space-y-6'>
-      <div className='inline-flex items-center'>
+      <div className='flex-wrap inline-flex items-center px-3 md:px-0'>
         <p className='text-lg text-gray-900 mr-6'>Your setup: </p>
         <span className='inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-yellow-100 text-yellow-800 mr-2'>{`${
           yoloCtx.bookYolo?.adults
@@ -121,7 +121,7 @@ const ConfirmYolo: FunctionComponent<IConfirmYoloProps> = () => {
           </div>
           <div className='flex flex-col items-center'>
             <button
-              className='mt-16 w-96 h-20 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-2xl font-bold items-center rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+              className='mt-16 w-48 md:w-96 h-20 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-2xl font-bold items-center rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
               onClick={() => setYoloRandom(sampleSize(yolos, 3))}
             >
               Reroll 🎲
