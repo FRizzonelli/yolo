@@ -23,10 +23,11 @@ const Landing: FunctionComponent<ILandingProps> = () => {
             <>
               <div className='flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8'>
                 <div className='flex justify-start lg:w-0 lg:flex-1'>
-                  <a href='#'>
+                  <Link to='/'>
                     <span className='sr-only'>Workflow</span>
-                    <img className='h-8 w-auto sm:h-10' src='https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg' alt='' />
-                  </a>
+                    {/* Icona YOLO! */}
+                    <img className='h-8 w-auto sm:h-10' src='/logo.png' alt='' />
+                  </Link>
                 </div>
                 <div className='-mr-2 -my-2 md:hidden'>
                   <Popover.Button className='bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'>
@@ -92,7 +93,7 @@ const Landing: FunctionComponent<ILandingProps> = () => {
               <div className='absolute inset-0'>
                 <img
                   className='h-full w-full object-cover'
-                  src='https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
+                  src='https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80'
                   alt='People working on laptops'
                 />
                 <div className='absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply' />
@@ -106,7 +107,8 @@ const Landing: FunctionComponent<ILandingProps> = () => {
                   <Link
                     to='/book-yolo/step-one'
                     onClick={onStartBookYoloClicked}
-                    className='flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8'
+                    className='flex items-center justify-center 
+                     border border-transparent text-2xl font-extrabold rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8'
                   >
                     YOLO!
                   </Link>
@@ -126,35 +128,38 @@ const Landing: FunctionComponent<ILandingProps> = () => {
               Why? You keep a fresh mind and costs are dead low.
             </p>
           </div>
+          <div>
+            <h2 className='mt-20 text-3xl text-center tracking-tight font-extrabold text-gray-900 sm:text-4xl'>How it works</h2>
+          </div>
           <div aria-hidden='true' className='absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100' />
           <AlternateStepComponent
             icon={SparklesIcon}
             side='r'
-            image='https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg'
+            image='https://images.unsplash.com/photo-1530521954074-e64f6810b32d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1650&q=80'
             description='You tell us how flexibile you are'
           />
           <AlternateStepComponent
             icon={SparklesIcon}
             side='l'
-            image='https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg'
+            image='https://images.unsplash.com/photo-1624965083751-16b1c40137f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
             description='You pick a kind of location you like'
           />
           <AlternateStepComponent
             icon={SparklesIcon}
             side='r'
-            image='https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg'
+            image='https://images.unsplash.com/photo-1502920514313-52581002a659?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1647&q=80'
             description='You onboard on a working trip with different locations, all known at last second so your mind stays fresh and we can keep the costs lower for you'
           />
           <AlternateStepComponent
             icon={SparklesIcon}
             side='l'
-            image='https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg'
+            image='https://images.unsplash.com/photo-1596526131083-e8c633c948d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
             description='A few days before the trip we give you the plan for the first location you will go'
           />
           <AlternateStepComponent
             icon={SparklesIcon}
             side='r'
-            image='https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg'
+            image='https://images.unsplash.com/photo-1595234336271-178875797b4d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80'
             description='You’ll receive further stops informations as you go!'
           />
         </div>
@@ -162,7 +167,12 @@ const Landing: FunctionComponent<ILandingProps> = () => {
         {/* Cta Section*/}
         <CtaYolo />
         {/* Testimonial Section */}
-        <Testimonial />
+        <Testimonial
+          quote='YOLOerei subito. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae.
+                  Numquam corrupti in laborum sed rerum et corporis.'
+          name='Massimo Frasson'
+          role='Product Manager, Strelka Games srl'
+        />
       </main>
 
       <footer className='bg-gray-50' aria-labelledby='footer-heading'>
