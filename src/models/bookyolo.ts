@@ -6,3 +6,10 @@ export type TBookYolo = {
     leaveOn?: 'weekends' | 'anytime';
     transport?: 'car' | 'public';
 }
+
+export type Yolo = {
+    title: string;
+    period: string;
+    price: number;
+    imageUrl: string;
+}
