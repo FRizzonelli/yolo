@@ -1,8 +1,12 @@
 import { FunctionComponent } from 'react';
 
-interface ITestimonial {}
+interface ITestimonial {
+  quote: string;
+  name: string;
+  role: string;
+}
 
-const Testimonial: FunctionComponent<ITestimonial> = () => {
+const Testimonial: FunctionComponent<ITestimonial> = ({ quote, name, role }) => {
   return (
     <section className='bg-white overflow-hidden'>
       <div className='relative max-w-7xl mx-auto pt-20 pb-12 px-4 sm:px-6 lg:px-8 lg:py-20'>
@@ -62,10 +66,7 @@ const Testimonial: FunctionComponent<ITestimonial> = () => {
             </svg>
             <blockquote className='relative'>
               <div className='text-2xl leading-9 font-medium text-gray-900'>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum
-                  sed rerum et corporis.
-                </p>
+                <p>{quote}</p>
               </div>
               <footer className='mt-8'>
                 <div className='flex'>
@@ -77,8 +78,8 @@ const Testimonial: FunctionComponent<ITestimonial> = () => {
                     />
                   </div>
                   <div className='ml-4 lg:ml-0'>
-                    <div className='text-base font-medium text-gray-900'>Judith Black</div>
-                    <div className='text-base font-medium text-indigo-600'>CEO, Tuple</div>
+                    <div className='text-base font-medium text-gray-900'>{name}</div>
+                    <div className='text-base font-medium text-indigo-600'>{role}</div>
                   </div>
                 </div>
               </footer>

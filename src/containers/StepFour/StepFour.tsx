@@ -36,7 +36,7 @@ const StepFour: FunctionComponent<IStepFourProps> = () => {
       <div className='bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6 h-96 flex flex-col justify-evenly'>
         <div className='md:col-span-1 mb-4 text-center'>
           <h3 className='text-3xl tracking-tight font-extrabold text-gray-900'>How would you move?</h3>
-          <p className='mt-1 text-lg text-gray-500'>Plz go green 🌲</p>
+          <p className='mt-1 text-lg text-gray-500'>We plan it for you 🌲</p>
         </div>
         <div className='mt-5 md:mt-0 md:col-span-2 flex justify-evenly'>
           <button
@@ -45,13 +45,16 @@ const StepFour: FunctionComponent<IStepFourProps> = () => {
           >
             Car
           </button>
-          <button
-            type='submit'
-            onClick={handleOnPublicTransportClicked}
-            className='ml-3 w-60 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-          >
-            Public Transport
-          </button>
+          <div className='relative'>
+            <button
+              type='submit'
+              onClick={handleOnPublicTransportClicked}
+              className='ml-3 w-60 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+            >
+              Public Transport
+            </button>
+            <img src='/greener.png' className='absolute -mt-8 -right-20 w-36' />
+          </div>
         </div>
       </div>
 
